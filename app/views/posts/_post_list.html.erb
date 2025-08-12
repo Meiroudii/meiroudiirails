@@ -2,12 +2,10 @@
   <% @posts.each do |post| %>
     <%= link_to post_path(post), data: { turbo_frame: "_top" }, class: "group block" do %>
       <div class="w-full rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-show duration-300 <%= 'border-2 border-yellow-400' if post.pro %>">
-
       <% if post.video_url.present? %>
         <div class="relative aspect-video rounded-t-xl overflow-hidden">
           <%= image_tag youtube_thumbnail(post.video_url),
             class: "w-full h-full object-cover transition duration-300 group-hover:brightness-75" %>
-
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="bg-white/90 rounded-full p-3 shadow-md transition-transform duration-300 group-hover:scale-10">
               <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">

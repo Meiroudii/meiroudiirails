@@ -7,10 +7,9 @@ module PostsHelper
     match = url.match(regex)
     match[1] if match
   end
-
   def youtube_thumbnail(url, quality: "hqdefault")
     id = youtube_id(url)
-    return unless id
+    return "fuck" unless id # fallback to a default thumbnail
     "https://img.youtube.com/vi/#{id}/#{quality}.jpg"
   end
 end
