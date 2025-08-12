@@ -1,0 +1,5 @@
+<%= form_with url: posts_path, method: :get, local: true, data: { searchDelayValue: 300, controller: "search", turbo_frame: "posts"}, class: "w-full" do |f| %>
+  <%= f.text_field :query, value: params[:query], placeholder: "Quick Search...", autocomplete: "off",
+  data: { action: "input->search#submit" },
+  class: "w-full py-2 px-4 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition text-sm placeholder-gray-500" %>
+  <svg class=""
