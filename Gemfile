@@ -61,3 +61,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Custom gems
+gem "friendly_id", "~> 5.5", ">= 5.5.1"
